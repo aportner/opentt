@@ -1,0 +1,3 @@
+[submodule "image-assets"]
+	path = image-assets
+	url = https://github.com/ttdevelopers/image-assets

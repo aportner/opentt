@@ -1,0 +1,28 @@
+{
+    "port": 8080,
+    "modules": [
+        {
+            "name": "webserver",
+            "config": {
+                "paths": {
+                    "www": "www",
+                    "static": "static",
+                    "roomManagerAssets": "roommanager_assets"
+                }
+            }
+        },
+        {
+            "name": "socket",
+            "config": {
+
+            }
+        },
+        {
+            "name": "db",
+            "config": {
+                "host": "localhost",
+                "db": "tt"
+            }
+        }
+    ]
+}
