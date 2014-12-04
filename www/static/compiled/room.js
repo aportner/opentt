@@ -149,7 +149,7 @@ function (e, t) {
                 return n && n._a ? i = e.call(this, t) : (n && n.id ? pt._wD(n.id + ": Ignoring " + t.type) : pt._wD(bt + "Ignoring " + t.type), i = null), i
             }
         }
-		
+
         this.setupOptions = {
             url: i || null,
             flashVersion: 8,
@@ -22289,7 +22289,7 @@ define("lib/stats", function (e) {
             },
             getHashedAddr: function (e, t) {
 				// return [ "localhost", 9000 ];
-			
+
                 var i = e || String(Math.random());
                 return t && (i = i + "_" + t), CHATSERVER_ADDRS[m.hashMod(i, CHATSERVER_ADDRS.length)]
             },
@@ -22317,7 +22317,7 @@ define("lib/stats", function (e) {
             unsentMessageCallbacks: [],
             whenSocketConnected: function (e) {
                 // m.socket.connected && m.socket.host == m.currentSocketServer && m.socket.options.port == m.currentSocketPort ? e() : m.unsentMessageCallbacks.push(e)
-                m.socket.socket.connected ? e() : m.unsentMessageCallbacks.push(e)
+                m.socket.connected ? e() : m.unsentMessageCallbacks.push(e)
             },
             messageReceived: function (e) {
                 if (u.DEBUG_MODE) m._messageReceived(e);
