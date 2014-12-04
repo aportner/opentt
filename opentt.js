@@ -7,6 +7,8 @@ var http            = require( 'http' );
 var io              = require( 'socket.io' );
 var os              = require( 'os' );
 var cookieParser    = require( 'cookie-parser' );
+var bodyParser      = require( 'body-parser' );
+var events          = require( 'events' );
 
 var config      = require( CONFIG_FILE );
 
@@ -30,6 +32,8 @@ OpenTT.prototype.initServer = function()
     this.io         = io( this.server );
 
     this.app.use( cookieParser() );
+    this.app.use( bodyParser.urlencoded( { extended: false } ) );
+    this.app.use( bodyParser.json() );
 
     this.server.listen( this.config.port );
 }
@@ -37,23 +41,30 @@ OpenTT.prototype.initServer = function()
 OpenTT.prototype.initModules = function()
 {
     var _this       = this;
-    this.modules    = [];
+    this.modules    = {};
+    this.events     = new events.EventEmitter();
 
     this.config.modules.forEach( function( moduleObj )
     {
-        var moduleClass = require( MODULES_DIR + '/' + moduleObj.name );
+        var moduleName  = moduleObj.name
+        var moduleClass = require( MODULES_DIR + '/' + moduleName );
         var module      = new moduleClass();
 
         module.tt       = _this;
         module.app      = _this.app;
         module.server   = _this.server;
         module.io       = _this.io;
-        module.db       = _this.db;
+        module.events   = _this.events;
         module.config   = moduleObj.config;
-        module.init();
 
-        _this.modules.push( module );
+        _this.modules[ moduleName ] = module;
     } );
+
+    for ( moduleName in this.modules )
+    {
+        module          = this.modules[ moduleName ];
+        module.init();
+    }
 }
 
 var tt          = new OpenTT( config );

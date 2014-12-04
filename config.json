@@ -21,7 +21,13 @@
             "name": "db",
             "config": {
                 "host": "localhost",
-                "db": "tt"
+                "db": "opentt"
+            }
+        },
+        {
+            "name": "avatar",
+            "config": {
+                "path": "avatars"
             }
         }
     ]

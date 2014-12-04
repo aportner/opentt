@@ -1,3 +1,6 @@
 [submodule "image-assets"]
 	path = image-assets
 	url = https://github.com/ttdevelopers/image-assets
+[submodule "avatars"]
+	path = avatars
+	url = https://github.com/ttdevelopers/avatars
