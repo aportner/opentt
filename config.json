@@ -37,6 +37,21 @@
             "config": {
 
             }
+        },
+        {
+            "name": "search",
+            "config": {
+                "providers": [
+                    {
+                        "name": "soundcloud",
+                        "default": "true",
+                        "config": {
+                            "id": "SOUNDCLOUD APP ID",
+                            "page": 20
+                        }
+                    }
+                ]
+            }
         }
     ]
 }
