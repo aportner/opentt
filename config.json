@@ -7,7 +7,9 @@
                 "paths": {
                     "www": "www",
                     "static": "static",
-                    "roomManagerAssets": "roommanager_assets"
+                    "roomManagerAssets": "roommanager_assets",
+                    "imageAssets": "image-assets",
+                    "avatars": "avatars"
                 }
             }
         },
@@ -28,6 +30,12 @@
             "name": "avatar",
             "config": {
                 "path": "avatars"
+            }
+        },
+        {
+            "name": "room",
+            "config": {
+
             }
         }
     ]
