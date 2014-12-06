@@ -21760,7 +21760,7 @@ define("lib/stats", function (e) {
                             });
                             b.start(), this.songVote.set("vote", ""), this.model.songLog.add(b), s.trigger("currentSong:change", b)
                         }
-                    } else LOG("no song"), this.currentSong = null, s.currentSongPlay && s.currentSongPlay.stop(), this.songVote.set("vote", ""), s.trigger("currentSong:change", null), s.currentSongPlay = void 0
+                    } else LOG("no song"), turntable.currentSound && turntable.currentSound.stop(), this.currentSong = null, s.currentSongPlay && s.currentSongPlay.stop(), this.songVote.set("vote", ""), s.trigger("currentSong:change", null), s.currentSongPlay = void 0
                 },
                 exposeSongInfo: function () {
                     song = this.currentSong, turntable.current_artist = song.metadata.artist, turntable.current_title = song.metadata.song, turntable.current_songid = song._id
