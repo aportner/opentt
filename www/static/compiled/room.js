@@ -22053,6 +22053,10 @@ define("lib/stats", function (e) {
             buddyList: !1,
             presenceUpdateInterval: 10,
             syncServerClock: function (e) {
+                if ( a.presence == null )
+                {
+                    return { done: function( cb ) { cb() } };
+                }
                 return a.presence.save(null, {
                     force: e
                 })
