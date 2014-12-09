@@ -9,7 +9,8 @@
                     "static": "static",
                     "roomManagerAssets": "roommanager_assets",
                     "imageAssets": "image-assets",
-                    "avatars": "avatars"
+                    "avatars": "avatars",
+                    "sounds": "sounds"
                 }
             }
         },
@@ -46,7 +47,7 @@
                         "name": "soundcloud",
                         "default": "true",
                         "config": {
-                            "id": "SOUNDCLOUD APP ID",
+                            "id": "SC_API_ID",
                             "page": 20
                         }
                     }
