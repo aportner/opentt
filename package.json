@@ -7,14 +7,15 @@
     "cookie-parser": "^1.3.3",
     "express": "^4.10.4",
     "mongoose": "^3.8.20",
+    "multer": "^0.1.6",
     "png-js": "^0.1.1",
     "q": "^1.1.2",
     "request": "^2.49.0",
     "socket.io": "^1.2.1"
   },
   "description": "An open source server for the now-defunct Turntable.fm",
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/aportner/opentt.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aportner/opentt.git"
   }
 }

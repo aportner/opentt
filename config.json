@@ -10,7 +10,8 @@
                     "roomManagerAssets": "roommanager_assets",
                     "imageAssets": "image-assets",
                     "avatars": "avatars",
-                    "sounds": "sounds"
+                    "sounds": "sounds",
+                    "uploads": "uploads"
                 }
             }
         },
