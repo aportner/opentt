@@ -11,7 +11,8 @@
     "png-js": "^0.1.1",
     "q": "^1.1.2",
     "request": "^2.49.0",
-    "socket.io": "^1.2.1"
+    "socket.io": "^1.2.1",
+    "spotify-web": "^1.2.0"
   },
   "description": "An open source server for the now-defunct Turntable.fm",
   "repository": {
